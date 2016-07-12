@@ -106,7 +106,7 @@ namespace Aurora.System.Network
             Client client = new Client((IPEndPoint)newSocket.RemoteEndPoint, DateTime.Now, EClientState.NotLogged);
             clientList.Add(newSocket, client);
             Console.WriteLine("Client connected. (From: " + string.Format("{0}:{1}", client.remoteEndPoint.Address.ToString(), client.remoteEndPoint.Port) + ")");
-            string output = "-- TELNET TEST SERVER --\n\r\n\r";
+            string output = "-- TELNET TEST SERVER --\n\r";
             output += "Please input your password:\n\r";
             client.clientState = EClientState.Logging;
             byte[] message = Encoding.ASCII.GetBytes(output);
@@ -142,7 +142,7 @@ namespace Aurora.System.Network
                     return;
                 }
 
-                Console.WriteLine("Received '{0}' (From: {1}:{2})", BitConverter.ToString(data, 0, received), client.remoteEndPoint.Address.ToString(), client.remoteEndPoint.Port);
+                Console.WriteLine("Received '{0}' (From: {1}:{2})", ASCIIEncoding.UTF8.GetString(data.Take(received).ToArray()).TrimEnd('\n','\r')/*BitConverter.ToString(data, 0, received)*/, client.remoteEndPoint.Address.ToString(), client.remoteEndPoint.Port);
 
                 // 0x2E & 0X0D => return/intro
                 if (data[0] == 0x2E && data[1] == 0x0D && client.commandIssued.Length == 0)

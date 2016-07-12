@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 
+using Aurora.System.Network;
+
 using NDesk.Options;
 
 namespace Aurora
@@ -58,6 +60,10 @@ namespace Aurora
                     ShowHelp(options);
                     break;
                 case StartupOption.StartGame:
+                    var binding = new TelnetNetworkBinding();
+                    binding.Start();
+                    Console.WriteLine("Press <Enter> to quit...");
+                    Console.ReadLine();
                     break;
                 default:
                     break;

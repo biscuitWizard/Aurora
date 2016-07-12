@@ -88,6 +88,7 @@
     <Compile Include="NonPersistentAttribute.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Network\TelnetNetworkBinding.cs" />
     <Compile Include="Typeclasses\DefaultChannel.cs" />
     <Compile Include="Typeclasses\DefaultCharacter.cs" />
     <Compile Include="Typeclasses\DefaultObject.cs" />
@@ -110,11 +111,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="World\" />
-    <Folder Include="System\" />
-    <Folder Include="Commands\" />
-    <Folder Include="System\Network\" />
     <Folder Include="System\Configuration\" />
+    <Folder Include="World\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

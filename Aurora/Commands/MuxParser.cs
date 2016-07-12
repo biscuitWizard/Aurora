@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Aurora.Typeclasses;
+
 namespace Aurora.Commands
 {
 	public class MuxParser : IMuxParser
@@ -7,6 +9,11 @@ namespace Aurora.Commands
 		public MuxParser ()
 		{
 		}
+
+	    public object[] GetMatchingCommands(string rawInput, TypedObject caller)
+	    {
+	        throw new NotImplementedException();
+	    }
 	}
 }
 

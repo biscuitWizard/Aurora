@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Aurora.Typeclasses;
+
 namespace Aurora.Commands
 {
 	public interface IMuxParser

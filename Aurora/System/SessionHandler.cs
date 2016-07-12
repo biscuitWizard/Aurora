@@ -42,7 +42,7 @@ namespace Aurora.System
 		/// know is connected to it. After this point we assume the session to be 
 		/// logged in one way or another.
 		/// </summary>
-		public void Login(Session session, object player, force = false, testMode = false) {
+		public void Login(Session session, object player, bool force = false, bool testMode = false) {
 
 		}
 
