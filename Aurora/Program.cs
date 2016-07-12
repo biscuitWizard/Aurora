@@ -57,6 +57,8 @@ namespace Aurora
                 case StartupOption.ShowHelp:
                     ShowHelp(options);
                     break;
+                case StartupOption.StartGame:
+                    break;
                 default:
                     break;
             }
