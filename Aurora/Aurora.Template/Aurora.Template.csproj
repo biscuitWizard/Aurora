@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,8 +47,8 @@
     <Compile Include="Typeclasses\Room.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Aurora\Aurora.csproj">
-      <Project>{f2b7f904-8c55-42c1-9160-bdbdf7d8a395}</Project>
+    <ProjectReference Include="..\Aurora.csproj">
+      <Project>{F2B7F904-8C55-42C1-9160-BDBDF7D8A395}</Project>
       <Name>Aurora</Name>
     </ProjectReference>
   </ItemGroup>

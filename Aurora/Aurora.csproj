@@ -98,6 +98,10 @@
     <Compile Include="System\Server.cs" />
     <Compile Include="System\SessionHandler.cs" />
     <Compile Include="System\Session.cs" />
+    <Compile Include="Commands\IMuxParser.cs" />
+    <Compile Include="Commands\MuxParser.cs" />
+    <Compile Include="System\Network\INetworkBinding.cs" />
+    <Compile Include="System\IGameServer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -106,6 +110,9 @@
   <ItemGroup>
     <Folder Include="World\" />
     <Folder Include="System\" />
+    <Folder Include="Commands\" />
+    <Folder Include="System\Network\" />
+    <Folder Include="System\Configuration\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
